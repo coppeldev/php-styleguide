@@ -4,6 +4,10 @@ var { RaisedButton } = Mui;
 
 var HomePage = React.createClass({
 
+    componentDidMount() {
+        document.querySelector('body').classList.add('hero');
+    },
+
     render() {
 
         return (
