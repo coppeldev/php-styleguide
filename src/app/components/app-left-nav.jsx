@@ -1,15 +1,10 @@
-var React = require('react');
-var Router = require('react-router');
-var Mui = require('material-ui');
-var { LeftNav } = Mui;
-/*
-var menuItems = [
-    { route: 'about-content', text: 'Acerca del contenido' },
-    { route: 'css-framework', text: 'Visión general' },
-    { route: 'components', text: 'Componentes' }
-];*/
+import React from 'react';
+import Router from 'react-router';
+import Mui from 'material-ui';
 
-var AppLeftNav = React.createClass({
+var { LeftNav } = Mui;
+
+export default React.createClass({
 
     mixins: [ Router.Navigation ],
 
@@ -21,8 +16,7 @@ var AppLeftNav = React.createClass({
 
     render() {
 
-        //mixins: [Router.Navigation, Router.State]
-        var header = <div className="logo" onClick={this._onHeaderClick}>PHP Styleguide</div>;
+        let header = <div className="logo" onClick={this._onHeaderClick}>PHP Styleguide</div>;
 
         return (
             <LeftNav
@@ -62,5 +56,3 @@ var AppLeftNav = React.createClass({
         this.context.router.transitionTo(payload.route);
     }
 });
-
-module.exports = AppLeftNav;

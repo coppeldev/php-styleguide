@@ -1,10 +1,11 @@
-var React = require('react');
-var Router = require('react-router');
+import React from 'react';
+import Router from 'react-router';
+import Mui from 'material-ui';
+
 var { RouteHandler } = Router;
-var Mui = require('material-ui');
 var { Menu } = Mui;
 
-var PageWithNav = React.createClass({
+export default React.createClass({
 
     mixins: [ Router.Navigation ],
 
@@ -45,5 +46,3 @@ var PageWithNav = React.createClass({
         this.context.router.transitionTo(item.route);
     }
 });
-
-module.exports = PageWithNav;

@@ -1,8 +1,9 @@
-var React = require('react');
-var Mui = require('material-ui');
+import React from 'react';
+import Mui from 'material-ui';
+
 var { RaisedButton } = Mui;
 
-var AboutContent = React.createClass({
+export default React.createClass({
 
     render() {
 
@@ -25,5 +26,3 @@ var AboutContent = React.createClass({
         );
     }
 });
-
-module.exports = AboutContent;

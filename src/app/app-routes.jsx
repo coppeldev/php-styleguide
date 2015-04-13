@@ -1,16 +1,15 @@
-var React = require('react');
-var Router = require('react-router');
-var { Route, DefaultRoute, Redirect } = Router;
+import React from 'react';
+import Router from 'react-router';
 
-var MasterPage = require('./components/master-page.jsx');
+import MasterPage from './components/master-page.jsx';
+import HomePage from './components/pages/home.jsx';
+import AboutContent from './components/pages/about-content.jsx';
+import Estandares from './components/pages/estandares.jsx';
+import Introduccion from './components/pages/estandares/introduccion.jsx';
 
-var HomePage = require('./components/pages/home.jsx');
-var AboutContent = require('./components/pages/about-content.jsx');
+let { Route, DefaultRoute, Redirect } = Router;
 
-var Estandares = require('./components/pages/estandares.jsx');
-var Introduccion = require('./components/pages/estandares/introduccion.jsx');
-
-var AppRoutes = (
+export default (
     <Route name="root" path="/" handler={MasterPage}>
         <Route name="home" handler={HomePage} />
         <Route name="about-content" handler={AboutContent} />
@@ -22,5 +21,3 @@ var AppRoutes = (
         <DefaultRoute handler={HomePage} />
     </Route>
 );
-
-module.exports = AppRoutes;

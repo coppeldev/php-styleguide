@@ -1,8 +1,7 @@
-var React = require('react');
-var PageWithNav = require('./page-with-nav.jsx');
+import React from 'react';
+import PageWithNav from './page-with-nav.jsx';
 
-
-var Estandares = React.createClass({
+export default React.createClass({
 
     render() {
 
@@ -19,5 +18,3 @@ var Estandares = React.createClass({
         );
     }
 });
-
-module.exports = Estandares;

@@ -1,8 +1,9 @@
-var React = require('react');
-var Mui = require('material-ui');
+import React from 'react';
+import Mui from 'material-ui';
+
 var { RaisedButton } = Mui;
 
-var HomePage = React.createClass({
+export default React.createClass({
 
     componentDidMount() {
         document.querySelector('body').classList.add('hero');
@@ -30,5 +31,3 @@ var HomePage = React.createClass({
         );
     }
 });
-
-module.exports = HomePage;

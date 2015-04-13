@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var Introduccion = React.createClass({
+export default React.createClass({
 
     render() {
 
@@ -12,5 +12,3 @@ var Introduccion = React.createClass({
         );
     }
 });
-
-module.exports = Introduccion;

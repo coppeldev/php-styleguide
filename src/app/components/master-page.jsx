@@ -1,17 +1,17 @@
-var React = require('react');
-var Router = require('react-router');
-var { RouteHandler } = Router;
-var AppLeftNav = require('./app-left-nav.jsx');
-var Mui = require('material-ui');
-var { AppCanvas, AppBar } = Mui;
+import React from 'react';
+import Router from 'react-router';
+import AppLeftNav from './app-left-nav.jsx';
+import Mui from 'material-ui';
 
+var { RouteHandler } = Router;
+var { AppCanvas, AppBar } = Mui;
 var menuItems = [
     { route: 'about-content', text: 'Acerca del contenido' },
     { route: 'css-framework', text: 'Visión general' },
     { route: 'estandares', text: 'Estandares' }
 ];
 
-var MasterPage = React.createClass({
+export default React.createClass({
 
     mixins: [Router.State],
 
@@ -46,9 +46,7 @@ var MasterPage = React.createClass({
         );
     },
 
-    _onMenuIconButtonTouchTap: function() {
+    _onMenuIconButtonTouchTap() {
         this.refs.leftNav.toggle();
     }
 });
-
-module.exports = MasterPage;
