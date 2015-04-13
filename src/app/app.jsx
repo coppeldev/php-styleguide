@@ -8,6 +8,7 @@ let injectTapEventPlugin = require("react-tap-event-plugin");
 
 injectTapEventPlugin();
 
-Router.run(Routes, Router.HistoryLocation, Handler => {
+// Router.HistoryLocation
+Router.run(Routes, Handler => {
     React.render(<Handler />, document.body);
 });

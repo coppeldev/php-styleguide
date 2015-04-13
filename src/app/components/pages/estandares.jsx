@@ -14,7 +14,6 @@ export default React.createClass({
             <div>
                 <PageWithNav menuItems={menuItems} />
             </div>
-
         );
     }
 });
