@@ -22,7 +22,9 @@
       ]
     ]
   },
+  "repository": "git@gitlab.com:byoigres/php-styleguide.git",
   "devDependencies": {
+    "babelify": "^6.0.2",
     "browser-sync": "^2.5.3",
     "browserify": "^9.0.8",
     "gulp": "^3.8.11",

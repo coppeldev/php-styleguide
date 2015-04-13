@@ -1,6 +1,7 @@
 var Gulp = require('gulp');
 var Browserify = require('browserify');
 var Watchify = require('watchify');
+var Babelify = require('babelify');
 var BundleLogger = require('../util/bundleLogger');
 var HandleErrors = require('../util/handleErrors');
 var Source = require('vinyl-source-stream');
@@ -19,6 +20,7 @@ Gulp.task('browserify', function(callback) {
             entries: bundleConfig.entries,
             debug: Config.debug
         });
+
         /*
         bundler.transform({
             global: true
@@ -35,6 +37,7 @@ Gulp.task('browserify', function(callback) {
             BundleLogger.start(bundleConfig.outputName);
 
             return bundler
+                .transform(Babelify)
                 .bundle()
                 .on('error', HandleErrors)
                 .pipe(Source(bundleConfig.outputName))
