@@ -18,6 +18,12 @@
 @import (less) "github.css";
 //@import (less) "monokai_sublime.css";
 
+
+body {
+    font-size: 15px;
+    line-height: 25px;
+}
+
 a {
     color: @accent-1-color;
     text-decoration: none;
@@ -100,8 +106,18 @@ a {
         max-width: (@desktop-keyline-increment * 14);
 
         section {
-            p {
+            p, li {
                 text-align: justify;
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            ul {
+                margin-left: 15px;
+
+                li {
+                    margin: 10px 0 0 5px;
+                }
             }
 
             p, li {
@@ -121,10 +137,6 @@ a {
                 color: @grey-500;
                 padding-left: 10px;
                 font-style: italic;
-            }
-
-            ul {
-                margin-left: 15px;
             }
         }
     }

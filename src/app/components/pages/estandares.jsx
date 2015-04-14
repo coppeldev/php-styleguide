@@ -7,7 +7,8 @@ export default React.createClass({
 
         var menuItems = [
             { route: 'introduccion', text: 'Introducción' },
-            { route: 'psr-1', text: 'PSR-1' }
+            { route: 'psr-1', text: 'PSR-1' },
+            { route: 'psr-2', text: 'PSR-2' }
         ];
 
         return (
